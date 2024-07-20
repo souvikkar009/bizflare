@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+.shadow-1 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.shadow-2 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.shadow-3 {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+@layer components {
+  .hero-btn {
+    @apply w-[200px]  py-3 rounded cursor-pointer;
+  }
+  .header-ele {
+    @apply cursor-pointer hover:text-brand-3 active:text-brand-3;
+  }
+  .demoFormInputContainer {
+    @apply w-1/4 flex flex-col items-center;
+  }
+  .demoFormInputHeader {
+    @apply text-sm;
+  }
+  .demoFormInput {
+    @apply w-full py-2 px-4 focus:outline-brand-3 bg-brand-bg1 border border-brand-1 rounded-md mt-1;
+  }
+}
