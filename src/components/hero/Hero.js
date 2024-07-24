@@ -14,7 +14,7 @@ const Hero = () => {
     <div className="flex items-center w-full">
       <div className="w-2/5 flex flex-col gap-8 pl-16">
         <div className="w-full text-6xl leading-tight text-brand-1 font-semibold tracking-tight">
-          Flare Up Your Online Presence with BizFlare
+          Flare Up Your Digital Presence with BizFlare
         </div>
         <div className="text-xl text-brand-2 leading-normal">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean

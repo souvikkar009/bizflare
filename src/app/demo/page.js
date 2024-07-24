@@ -1,15 +1,14 @@
-import DemoInputForm from "@/components/demoPageComponents/DemoInputForm";
-import React from "react";
+import Demo from "@/components/demo/Demo";
 
-const Demo = () => {
+const DemoPage = () => {
   return (
     <div className="mt-24">
       <div className="text-center font-semibold text-2xl text-brand-1 mb-4">
         Generate Ad Creatives Using BizFlare
       </div>
-      <DemoInputForm />
+      <Demo />
     </div>
   );
 };
 
-export default Demo;
+export default DemoPage;

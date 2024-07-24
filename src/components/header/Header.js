@@ -11,9 +11,11 @@ import Link from "next/link";
 
 const Header = () => {
   const [isSignedIn, setIsSignedIn] = useState("loading");
+  const [userData, setUserData] = useState({});
 
   useEffect(() => {
     const _isSignedIn = JSON.parse(localStorage.getItem("isSignedIn"));
+    setUserData(JSON.parse(localStorage.getItem("userData")));
     setIsSignedIn(_isSignedIn ? "yes" : "no");
   }, []);
 
@@ -26,7 +28,7 @@ const Header = () => {
   return (
     <div>
       <div className="flex items-center justify-between h-20 bg-brand-bg1 px-8 font-semibold z-50">
-        <div className="flex items-center gap-8 text-brand-1">
+        <div className="flex items-center gap-10 text-brand-1">
           <div
             onClick={() => window.location.replace("/")}
             className="text-brand-3 text-2xl flex items-center gap-2 cursor-pointer"
@@ -36,15 +38,26 @@ const Header = () => {
           </div>
           <div className="header-ele">Learn</div>
           <div className="header-ele">Pricing</div>
-          <div className="header-ele">Contribute</div>
-          <div className="header-ele">About Us</div>
+
+          <Link
+            href={isSignedIn === "yes" ? "/upload-template" : "/"}
+            className="header-ele"
+          >
+            Contribute Template
+          </Link>
+          <Link
+            href={`${isSignedIn === "yes" ? `/partner/${userData.userId}` : "/"}`}
+            className="header-ele"
+          >
+            Partner as Influencer
+          </Link>
         </div>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6">
           {isSignedIn === "yes" && (
             <>
               <div>
-                <IoNotificationsOutline className="text-brand-1 text-3xl cursor-pointer" />
+                <IoNotificationsOutline className="text-brand-1 text-2xl cursor-pointer" />
               </div>
               <div className="pt-[6px]">
                 <ProfileMenu />

@@ -4,11 +4,6 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  IconButton,
 } from "@chakra-ui/react";
 import axios from "axios";
 import Link from "next/link";
@@ -16,7 +11,6 @@ import { FaUserCircle } from "react-icons/fa";
 
 const ProfileMenu = () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
-  console.log(userData);
   const handleSignOut = async () => {
     const { success, message } = await axios
       .get(`http://localhost:3000/api/auth/signout`)
@@ -29,6 +23,7 @@ const ProfileMenu = () => {
       return;
     }
     localStorage.setItem("isSignedIn", false);
+    localStorage.removeItem("userData");
     window.location.replace("/");
 
     console.log(success, message);
