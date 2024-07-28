@@ -1,12 +1,14 @@
+import Demo from "@/components/demo/Demo";
 import PhotoSearchResult from "@/components/photoSearchResult/PhotoSearchResult";
 import React from "react";
 
-const DesignAd = () => {
+const DesignAdPage = () => {
   return (
     <div className="mt-24">
-      <PhotoSearchResult />
+      {/* <PhotoSearchResult /> */}
+      <Demo/>
     </div>
   );
 };
 
-export default DesignAd;
+export default DesignAdPage;

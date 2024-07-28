@@ -48,7 +48,7 @@ const AuthForm = ({ onClose, isOpen }) => {
       return;
     }
 
-    alert(response.data.message);
+    alert(message);
     setuserInputs(initialState);
     onClose();
   };

@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
 import serviceCardData from "@/data/ServiceCardData";
+import Link from "next/link";
 
 const ServiceDisplay = () => {
   return (
@@ -11,12 +12,13 @@ const ServiceDisplay = () => {
       <div className="flex items-center flex-wrap justify-center gap-12 mt-12">
         {serviceCardData.map((card) => {
           return (
-            <ServiceCard
-              img_src={card.img_src}
-              heading={card.heading}
-              desc={card.desc}
-              key={card.heading}
-            />
+            <Link key={card.heading} href={`/${card.link}`}>
+              <ServiceCard
+                img_src={card.img_src}
+                heading={card.heading}
+                desc={card.desc}
+              />
+            </Link>
           );
         })}
       </div>

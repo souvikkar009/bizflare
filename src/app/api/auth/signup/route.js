@@ -14,7 +14,7 @@ export async function POST(request) {
     const user = await User.findOne({ userEmail }).select(
       "userFullName userEmail"
     );
-    
+
     if (user) {
       return NextResponse.json({
         message: "User Already Exists",
@@ -29,6 +29,7 @@ export async function POST(request) {
       userFullName,
       userEmail,
       userPassword: hashedPasswrod,
+      userRole: "client",
     });
 
     return NextResponse.json({

@@ -22,7 +22,7 @@
     @apply w-[200px]  py-3 rounded cursor-pointer;
   }
   .header-ele {
-    @apply cursor-pointer hover:text-brand-3 active:text-brand-3;
+    @apply cursor-pointer hover:text-brand-3;
   }
   .demoFormInputContainer {
     @apply w-1/4 flex flex-col gap-1 items-center;
@@ -32,5 +32,14 @@
   }
   .demoFormInput {
     @apply w-full py-2 px-4 focus:outline-brand-3 bg-brand-bg1 border border-brand-1 rounded-md mt-1;
+  }
+  .upsb-ele {
+    @apply py-2 w-full text-center rounded-md hover:bg-brand-bg2 cursor-pointer ease-in duration-100 flex items-center justify-center gap-1;
+  }
+  .user-info-area {
+    @apply flex flex-col gap-2;
+  }
+  .user-info {
+    @apply py-2 px-4 bg-brand-bg4 border border-brand-1 rounded-md;
   }
 }

@@ -1,15 +1,9 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Types, Schema } from "mongoose";
 
 const userSchema = new Schema({
   userFullName: {
     type: String,
     required: true,
-  },
-  companyName: {
-    type: String,
-  },
-  companyType: {
-    type: String,
   },
   userEmail: {
     type: String,
@@ -18,6 +12,23 @@ const userSchema = new Schema({
   userPassword: {
     type: String,
     required: true,
+  },
+  userRole: {
+    type: String,
+    default: `client`,
+  },
+  businessId: {
+    type: Types.ObjectId,
+    ref: "Business",
+    default: null,
+  },
+  userMetaAdId: {
+    type: String,
+    default: null,
+  },
+  userGoogleAdId: {
+    type: String,
+    default: null,
   },
 });
 

@@ -8,14 +8,13 @@ import AuthForm from "../authForm/AuthForm";
 import { MdOndemandVideo } from "react-icons/md";
 import ProfileMenu from "./ProfileMenu";
 import Link from "next/link";
+import PartnerMenu from "./PartnerMenu";
 
 const Header = () => {
   const [isSignedIn, setIsSignedIn] = useState("loading");
-  const [userData, setUserData] = useState({});
 
   useEffect(() => {
     const _isSignedIn = JSON.parse(localStorage.getItem("isSignedIn"));
-    setUserData(JSON.parse(localStorage.getItem("userData")));
     setIsSignedIn(_isSignedIn ? "yes" : "no");
   }, []);
 
@@ -26,8 +25,8 @@ const Header = () => {
   } = useDisclosure();
 
   return (
-    <div>
-      <div className="flex items-center justify-between h-20 bg-brand-bg1 px-8 font-semibold z-50">
+    <div className="bg-brand-bg1 z-50 fixed top-0 w-screen h-20 border border-b-slate-300">
+      <div className="flex items-center justify-between h-full px-8 font-semibold">
         <div className="flex items-center gap-10 text-brand-1">
           <div
             onClick={() => window.location.replace("/")}
@@ -45,12 +44,9 @@ const Header = () => {
           >
             Contribute Template
           </Link>
-          <Link
-            href={`${isSignedIn === "yes" ? `/partner/${userData.userId}` : "/"}`}
-            className="header-ele"
-          >
-            Partner as Influencer
-          </Link>
+          <div>
+            <PartnerMenu />
+          </div>
         </div>
 
         <div className="flex items-center gap-6">

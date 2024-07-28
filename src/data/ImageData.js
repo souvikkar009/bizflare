@@ -13,7 +13,7 @@ const dummyImgData = [
   },
   {
     id: 4,
-    img_src: `https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77`,
+    img_src: `https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/26219086/2023/12/4/b90e3edc-c0d7-4605-919a-af4497e0c3ca1701686292094LibertyUnisexKidsBlackTexturedSneakers1.jpg`,
   },
 ];
 

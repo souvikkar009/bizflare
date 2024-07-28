@@ -1,16 +1,16 @@
 "use client";
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-} from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import axios from "axios";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 
 const ProfileMenu = () => {
-  const userData = JSON.parse(localStorage.getItem("userData"));
+  const [userData, setUserData] = useState({});
+  useEffect(() => {
+    setUserData(JSON.parse(localStorage.getItem("userData")));
+  }, []);
+
   const handleSignOut = async () => {
     const { success, message } = await axios
       .get(`http://localhost:3000/api/auth/signout`)

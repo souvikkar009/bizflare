@@ -1,8 +1,8 @@
 import geminiModel from "@/helper/GeminiModel";
 
-export const genAdTexts = async (specificBType) => {
+export const genAdTexts = async (businessName, specificBType) => {
   let prompt = `
-  List 4 catchy ad texts which includes a title and a description part for a ${specificBType} business using this JSON schema:
+  List 4 catchy ad texts which includes a title and a description part for a ${specificBType} business. The Business House Name is ${businessName}. Use this JSON schema:
     { "type": "array",
       "properties": {
       "title": { "type": "string" },

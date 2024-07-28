@@ -7,6 +7,7 @@ import GeneralBusinessTypes from "@/data/BusinessTypeData/GeneralBusiness";
 import { useState } from "react";
 import SpecificBusinessTypes from "@/data/BusinessTypeData/SpecificBusiness";
 import axios from "axios";
+import Image from "next/image";
 
 const Demo = () => {
   const [demoImgs, setDemoImgs] = useState([]);
@@ -98,20 +99,21 @@ const Demo = () => {
           </button>
         </div>
       </form>
-      <div className=" mt-6 w-full flex items-center justify-center">
-        <div className="flex flex-wrap w-4/5 gap-8 items-start justify-center">
-          {demoImgs &&
-            demoImgs.map((img_src) => {
-              return (
-                <img
-                  src={img_src}
-                  key={demoImgs.indexOf(img_src)}
-                  alt="demoAdImg"
-                  className="w-[480px] h-[480px] rounded-md"
-                />
-              );
-            })}
-        </div>
+
+      <div className="my-6 flex w-full flex-wrap gap-4 justify-center">
+        {demoImgs &&
+          demoImgs.map((img_src) => {
+            return (
+              <Image
+                width={400}
+                height={400}
+                src={img_src}
+                alt="demoAdImg"
+                key={demoImgs.indexOf(img_src)}
+                className="rounded-md cursor-pointer hover:opacity-80"
+              />
+            );
+          })}
       </div>
     </div>
   );

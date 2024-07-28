@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${poppins.variable} poppins bg-brand-bg3`}>
         <ChakraUIProvider>
-          <div className="fixed top-0 w-screen mb-20">
+          <div>
             <Header />
           </div>
           <div>{children}</div>
