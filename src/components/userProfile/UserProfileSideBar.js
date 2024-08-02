@@ -16,7 +16,7 @@ const UserProfileSideBar = () => {
     <div className="mt-8 flex flex-col gap-2 items-center px-4 text-brand-1 font-semibold">
       <Link
         href={`/user/${userData.userId}`}
-        className={`upsb-ele ${
+        className={`sb-ele ${
           pathName.includes(`user`) ? "bg-brand-bg2" : "bg-white"
         }`}
       >
@@ -29,7 +29,7 @@ const UserProfileSideBar = () => {
             ? `/business/${userData.businessId}`
             : `/create-business/${userData.userId}`
         }
-        className={`upsb-ele ${
+        className={`sb-ele ${
           pathName.includes(`business`) ? "bg-brand-bg2" : "bg-white"
         }`}
       >

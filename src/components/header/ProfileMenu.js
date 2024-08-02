@@ -35,7 +35,14 @@ const ProfileMenu = () => {
       </MenuButton>
       <MenuList>
         <MenuItem>
-          <Link href={`/user/${userData.userId}`} className="w-full">
+          <Link
+            href={
+              userData.userRole === `influencer`
+                ? "/"
+                : `/user/${userData.userId}`
+            }
+            className="w-full"
+          >
             My Profile
           </Link>
         </MenuItem>

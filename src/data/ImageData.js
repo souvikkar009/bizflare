@@ -1,19 +1,19 @@
 const dummyImgData = [
   {
     id: 1,
-    img_src: `https://images.unsplash.com/photo-1561909848-977d0617f275`,
+    img_src: `https://i.pinimg.com/originals/1d/ca/cb/1dcacb7927265dd82ab26c3a7d853203.png`,
   },
   {
     id: 2,
-    img_src: `https://images.unsplash.com/photo-1529810313688-44ea1c2d81d3`,
+    img_src: `https://www.pngall.com/wp-content/uploads/5/Samsung-TV-PNG.png`,
   },
   {
     id: 3,
-    img_src: `https://images.unsplash.com/photo-1570464197285-9949814674a7`,
+    img_src: `https://pngimg.com/d/air_conditioner_PNG25.png`,
   },
   {
     id: 4,
-    img_src: `https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/26219086/2023/12/4/b90e3edc-c0d7-4605-919a-af4497e0c3ca1701686292094LibertyUnisexKidsBlackTexturedSneakers1.jpg`,
+    img_src: `https://pngimg.com/d/washing_machine_PNG15570.png`,
   },
 ];
 

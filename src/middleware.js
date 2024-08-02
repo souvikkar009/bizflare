@@ -14,5 +14,21 @@ export async function middleware(request) {
 }
 
 export const config = {
-  matcher: ["/designAd", "/user/:path*", "/demo"],
+  matcher: [
+    "/designAd",
+    "/user/:path*",
+    "/demo",
+    "/business/:path*",
+    "/create-business/:path*",
+    "/ad-templates",
+    "/upload-templates",
+    "/ad-platforms",
+    "/googoleAds",
+    "/metaAds",
+    "/brandAd",
+    "/discountAd",
+    "/productAd",
+    "/seasonalAd",
+    "/influencer-list"
+  ],
 };

@@ -15,7 +15,6 @@
     "@emotion/styled": "^11.13.0",
     "@google/generative-ai": "^0.15.0",
     "axios": "^1.7.2",
-    "basic-instagram-user-details": "^1.0.2",
     "bcryptjs": "^2.4.3",
     "canvas": "^2.11.2",
     "canvas-txt": "^4.1.1",

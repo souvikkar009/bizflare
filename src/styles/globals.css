@@ -19,7 +19,7 @@
 
 @layer components {
   .hero-btn {
-    @apply w-[200px]  py-3 rounded cursor-pointer;
+    @apply w-[200px]  py-3 rounded-md cursor-pointer;
   }
   .header-ele {
     @apply cursor-pointer hover:text-brand-3;
@@ -33,13 +33,13 @@
   .demoFormInput {
     @apply w-full py-2 px-4 focus:outline-brand-3 bg-brand-bg1 border border-brand-1 rounded-md mt-1;
   }
-  .upsb-ele {
+  .sb-ele {
     @apply py-2 w-full text-center rounded-md hover:bg-brand-bg2 cursor-pointer ease-in duration-100 flex items-center justify-center gap-1;
   }
   .user-info-area {
     @apply flex flex-col gap-2;
   }
   .user-info {
-    @apply py-2 px-4 bg-brand-bg4 border border-brand-1 rounded-md;
+    @apply py-2 px-4 bg-brand-bg2 border border-brand-1 rounded-md;
   }
 }

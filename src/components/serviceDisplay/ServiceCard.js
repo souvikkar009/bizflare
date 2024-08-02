@@ -13,7 +13,7 @@ const ServiceCard = ({ img_src, heading, desc }) => {
       <div className="mt-6 text-xl text-center font-semibold text-brand-1">
         {heading}
       </div>
-      <div className="mt-4 text-brand-2">{desc}</div>
+      <div className="mt-4 text-brand-2 text-center">{desc}</div>
     </div>
   );
 };

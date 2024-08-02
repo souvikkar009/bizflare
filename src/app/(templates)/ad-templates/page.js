@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import adTypes from "@/data/adTypes";
-import Image from "next/image";
 
 const AdTemplates = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4 mt-24">
+    <div className="flex flex-wrap items-center justify-center gap-4 px-16 mt-4">
       {adTypes.map((types) => {
         return (
           <div key={types.id}>

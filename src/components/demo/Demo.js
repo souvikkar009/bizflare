@@ -26,7 +26,7 @@ const Demo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const resDemoImgs = await axios
-      .post(`http://localhost:3000/api/genDemoAds`, businessData)
+      .post(`http://localhost:3000/api/genAds/genDemoAds`, businessData)
       .then((res) => res.data)
       .catch((error) => {
         console.log(error);
@@ -48,9 +48,9 @@ const Demo = () => {
             />
           </div>
           <div className="demoFormInputContainer">
-            <div className="demoFormInputHeader">General Business Type</div>
+            <div className="demoFormInputHeader">Industry</div>
             <Select
-              placeholder="Select Your Business Type"
+              placeholder="Select Industry"
               bg={"brand.bg1"}
               name="generalBType"
               size={"md"}
@@ -67,9 +67,9 @@ const Demo = () => {
             </Select>
           </div>
           <div className="demoFormInputContainer">
-            <div className="demoFormInputHeader">Specific Business Type</div>
+            <div className="demoFormInputHeader">Specific Business Domain</div>
             <Select
-              placeholder="Select Your Niche Business"
+              placeholder="Select Specific Business Doamin"
               bg={"brand.bg1"}
               name="specificBType"
               size={"md"}
@@ -92,7 +92,7 @@ const Demo = () => {
         <div className="flex w-full items-center justify-center mt-4">
           <button
             type="submit"
-            className="bg-brand-3 text-brand-bg1 flex items-center gap-2 justify-center py-2 px-4 rounded-md"
+            className="bg-brand-3 text-brand-bg1 hover:bg-brand-1 ease-linear duration-150 flex items-center gap-2 justify-center py-2 px-4 rounded-md"
           >
             <span>Generate</span>
             <LuRefreshCw />

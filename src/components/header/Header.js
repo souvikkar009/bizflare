@@ -39,7 +39,7 @@ const Header = () => {
           <div className="header-ele">Pricing</div>
 
           <Link
-            href={isSignedIn === "yes" ? "/upload-template" : "/"}
+            href={isSignedIn === "yes" ? "/upload-templates" : "/"}
             className="header-ele"
           >
             Contribute Template

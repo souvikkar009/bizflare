@@ -1,5 +1,7 @@
 "use client";
-import { Input, Stack, usePanGesture } from "@chakra-ui/react";
+import GeneralBusinessTypes from "@/data/BusinessTypeData/GeneralBusiness";
+import SpecificBusinessTypes from "@/data/BusinessTypeData/SpecificBusiness";
+import { Input, Select, Stack, usePanGesture } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
@@ -97,39 +99,52 @@ const EditBusinessInfo = ({ userId, business }) => {
       </div>
       <div className="flex flex-col gap-2">
         <div>Industry</div>
-        <Input
-          variant="unstyled"
-          placeholder="Industry"
+        <Select
+          placeholder="Select Industry"
           bg={"brand.bg2"}
-          py={2}
-          px={4}
-          value={businessData.bIndustry}
           name="bIndustry"
+          size={"md"}
           onChange={(e) => {
             setBusinessData({
               ...businessData,
               [e.target.name]: e.target.value,
             });
           }}
-        />
+          value={businessData.bIndustry}
+        >
+          {GeneralBusinessTypes.map((bType) => {
+            return (
+              <option value={bType.typeName} key={bType.id}>
+                {bType.typeName}
+              </option>
+            );
+          })}
+        </Select>
       </div>
       <div className="flex flex-col gap-2">
         <div>Specific Domain</div>
-        <Input
-          variant="unstyled"
-          placeholder="Specific Domain"
+        <Select
+          placeholder="Select Specific Domain"
           bg={"brand.bg2"}
-          py={2}
-          px={4}
-          value={businessData.bDomain}
           name="bDomain"
+          size={"md"}
           onChange={(e) => {
             setBusinessData({
               ...businessData,
               [e.target.name]: e.target.value,
             });
           }}
-        />
+          value={businessData.bDomain}
+        >
+          {businessData.bIndustry &&
+            SpecificBusinessTypes[businessData.bIndustry].map((domain) => {
+              return (
+                <option value={domain} key={domain}>
+                  {domain}
+                </option>
+              );
+            })}
+        </Select>
       </div>
       <div className="flex flex-col gap-2">
         <div>Business Type</div>

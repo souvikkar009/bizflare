@@ -17,23 +17,23 @@ const Hero = () => {
           Flare Up Your Digital Presence with BizFlare
         </div>
         <div className="text-xl text-brand-2 leading-normal">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et.
+          BizFlare is a one stop solutions for MSMEs to automate their digital
+          marketing and establish a robust digital footprint with least manual
+          intervention, enable them to focus their core businesses.
         </div>
         <div className="flex items-center gap-8 font-semibold text-center">
           <div
-            className="hero-btn bg-brand-3 text-white border-2 border-brand-3"
+            className="hero-btn bg-brand-3 text-white border-2 border-brand-3 hover:bg-brand-1 hover:border-brand-1 ease-linear duration-200"
             onClick={() => scrollToSection("serviceDisplay")}
           >
             Explore Services
           </div>
 
           <Link
-            href={"designAd"}
-            className="hero-btn bg-brand-bg1 text-brand-3 border-2 border-brand-3"
+            href={"/brandAd"}
+            className="hero-btn bg-brand-bg1 text-brand-3 border-2 border-brand-3 hover:text-brand-1 hover:border-brand-1 ease-linear duration-200"
           >
-            Design Ad Campaign
+            Design Ad Creatives
           </Link>
         </div>
       </div>

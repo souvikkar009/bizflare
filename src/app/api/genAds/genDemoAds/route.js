@@ -1,12 +1,12 @@
 import ImgSources from "@/data/ImgsOfBusinesses/ImgSourceData";
-import { genAdTexts } from "@/utils/genAdTexts";
-import { genBrandAd, genNewProductAd } from "@/utils/templates";
+import { genBrandAdTexts } from "@/utils/genAdTexts";
+import { genBrandAd } from "@/utils/templates";
 import { NextResponse } from "next/server";
 
 export async function POST(request) {
   const { businessName, generalBType, specificBType } = await request.json();
   const imgs = await ImgSources[specificBType].map((source) => source);
-  const txtResponse = await genAdTexts(businessName, specificBType);
+  const txtResponse = await genBrandAdTexts(businessName, specificBType);
   const adTexts = await JSON.parse(txtResponse);
 
   const finalImgs = [];

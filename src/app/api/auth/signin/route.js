@@ -10,7 +10,7 @@ export async function POST(request) {
     const reqBody = await request.json();
     const { userEmail, userPassword } = reqBody;
     const user = await User.findOne({ userEmail }).select(
-      "userFullName userEmail userPassword businessId"
+      "userFullName userEmail userPassword businessId userRole"
     );
     if (!user) {
       return NextResponse.json({
@@ -34,8 +34,9 @@ export async function POST(request) {
       userEmail: user.userEmail,
       userFullName: user.userFullName,
       userId: user._id,
-      businessId: user.businessId || null
-    };
+      businessId: user.businessId || null,
+      userRole: user.userRole,
+    }
 
     const token = jwt.sign(userData, process.env.SIGNIN_TOKEN_SECRET, {
       expiresIn: "3d",
